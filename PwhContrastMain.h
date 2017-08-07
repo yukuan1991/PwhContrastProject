@@ -20,9 +20,17 @@ public:
 private:
     void fileNew();
 private:
+    void addFirstTable();
+    void addSecondTable();
+    void addThirdTable();
+    void clearFirstTable();
+    void clearSecondTable();
+    void clearThirdTable();
+private:
     void initConn();
 private:
     not_null<PwhContrast*> createWindow();
+    PwhContrast* activeWindow();
 private:
     Ui::PwhContrastMain *ui;
 };

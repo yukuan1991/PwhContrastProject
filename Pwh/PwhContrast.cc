@@ -19,13 +19,13 @@ PwhContrast::PwhContrast(QWidget *parent) :
     set_table();
     init_conn();
 
-    ui->tree_product->setModel (fs_model_.get());
-    ui->tree_product->header()->hide();
-    assert(boost::filesystem::exists(PRODUCT_PATH));
-    fs_model_->setRootPath (PRODUCT_PATH);
-    ui->tree_product->setRootIndex (fs_model_->index (PRODUCT_PATH));
-    fs_model_->set_master(PRODUCT_PATH);
-    ui->tree_product->setEditTriggers(QAbstractItemView::NoEditTriggers);
+//    ui->tree_product->setModel (fs_model_.get());
+//    ui->tree_product->header()->hide();
+//    assert(boost::filesystem::exists(PRODUCT_PATH));
+//    fs_model_->setRootPath (PRODUCT_PATH);
+//    ui->tree_product->setRootIndex (fs_model_->index (PRODUCT_PATH));
+//    fs_model_->set_master(PRODUCT_PATH);
+//    ui->tree_product->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }
 
 PwhContrast::~PwhContrast()

@@ -32,7 +32,7 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="Ribbon" name="rib" native="true"/>
+      <widget class="PwhContrastRibbon" name="rib" native="true"/>
      </item>
      <item>
       <widget class="QMdiArea" name="mdi"/>
@@ -44,9 +44,9 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>Ribbon</class>
+   <class>PwhContrastRibbon</class>
    <extends>QWidget</extends>
-   <header>interface_control/Ribbon.h</header>
+   <header>interface_control/PwhContrastRibbon.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

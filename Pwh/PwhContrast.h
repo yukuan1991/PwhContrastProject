@@ -23,6 +23,13 @@ public:
 
     void set_current_path (const QString& path) { current_path_ = path; }
     QString get_current_path () { return current_path_; }
+public:
+    void on_add_clicked();
+    void on_add_2_clicked();
+    void on_add_3_clicked();
+    void on_delete_2_clicked();
+    void on_delete_3_clicked();
+    void on_delete_4_clicked();
 private:
     void init_conn();
 private:
@@ -44,12 +51,6 @@ private:
     QTableWidget* find_empty_table();
 
 private slots:
-    void on_add_clicked();
-    void on_add_2_clicked();
-    void on_add_3_clicked();
-    void on_delete_2_clicked();
-    void on_delete_3_clicked();
-    void on_delete_4_clicked();
     void on_tree_product_clicked(const QModelIndex& index);
     void on_tree_product_doubleClicked(const QModelIndex& index);
 private:
