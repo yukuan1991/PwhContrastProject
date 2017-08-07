@@ -43,27 +43,62 @@ void PwhContrastMain::addFirstTable()
 void PwhContrastMain::addSecondTable()
 {
     qDebug() << "addSecondTable";
+    auto w = activeWindow();
+    if(w == nullptr)
+    {
+        return;
+    }
+
+    w->on_add_2_clicked();
 }
 
 void PwhContrastMain::addThirdTable()
 {
     qDebug() << "addThirdTable";
+    auto w = activeWindow();
+    if(w == nullptr)
+    {
+        return;
+    }
+
+    w->on_add_3_clicked();
 }
 
 void PwhContrastMain::clearFirstTable()
 {
     qDebug() << "clearFirstTable";
+    auto w = activeWindow();
+    if(w == nullptr)
+    {
+        return;
+    }
+
+    w->on_delete_2_clicked();
 }
 
 void PwhContrastMain::clearSecondTable()
 {
     qDebug() << "clearSecondTable";
+    auto w = activeWindow();
+    if(w == nullptr)
+    {
+        return;
+    }
+
+    w->on_delete_3_clicked();
 
 }
 
 void PwhContrastMain::clearThirdTable()
 {
     qDebug() << "clearThirdTable";
+    auto w = activeWindow();
+    if(w == nullptr)
+    {
+        return;
+    }
+
+    w->on_delete_4_clicked();
 }
 
 void PwhContrastMain::initConn()
