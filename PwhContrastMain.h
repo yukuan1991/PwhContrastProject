@@ -12,7 +12,6 @@ class PwhContrast;
 class PwhContrastMain : public QWidget
 {
     Q_OBJECT
-
 public:
     explicit PwhContrastMain(QWidget *parent = 0);
     ~PwhContrastMain();
@@ -26,6 +25,11 @@ private:
     void clearFirstTable();
     void clearSecondTable();
     void clearThirdTable();
+
+    void importAnalysisFile();
+    void upChart();
+    void downChart();
+    void exportPDF();
 private:
     void initConn();
 private:

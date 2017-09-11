@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui charts printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG -= c++11
@@ -39,7 +39,12 @@ SOURCES += main.cc\
     Model/product_info_model.cpp \
     Model/product_structure_model.cpp \
     data_veryfication.cpp \
-    interface_control/PwhContrastRibbon.cc
+    interface_control/PwhContrastRibbon.cc \
+    Pwh/PwhListWidget.cc \
+    Pwh/PieView.cc \
+    Pwh/StatView.cc \
+    Qt-Utils/openaf.cc \
+    JsonTree.cc
 
 HEADERS  += PwhContrastMain.h \
     interface_control/Ribbon.h \
@@ -56,11 +61,19 @@ HEADERS  += PwhContrastMain.h \
     Model/product_info_model.h \
     Model/product_structure_model.h \
     data_veryfication.h \
-    interface_control/PwhContrastRibbon.h
+    interface_control/PwhContrastRibbon.h \
+    Pwh/PwhListWidget.h \
+    Pwh/PieView.h \
+    Pwh/StatView.h \
+    Qt-Utils/openaf.h \
+    JsonTree.h
 
 FORMS    += pwhcontrastmain.ui \
     Pwh/pwhcontrast.ui \
-    Pwh/production_management_button_tree_dlg.ui
+    Pwh/production_management_button_tree_dlg.ui \
+    Pwh/StatView.ui
 
 LIBS += -lboost_filesystem
 LIBS += -lboost_system
+LIBS += -lboost_locale
+LIBS += -liconv

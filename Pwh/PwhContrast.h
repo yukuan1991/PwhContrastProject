@@ -5,6 +5,7 @@
 #include <optional>
 #include "Qt-Utils/json.hpp"
 #include "Model/product_structure_model.h"
+#include "Qt-Utils/openaf.h"
 
 namespace Ui {
 class PwhContrast;
@@ -30,8 +31,14 @@ public:
     void on_delete_2_clicked();
     void on_delete_3_clicked();
     void on_delete_4_clicked();
+    void importAnalysisFile();
+    void upChart();
+    void downChart();
+    void exportPDF();
 private:
     void init_conn();
+private:
+    bool parseAnalysisFile(const std::vector<taskInfo>& data);
 private:
     void setup_more_ui ();
     void set_table();

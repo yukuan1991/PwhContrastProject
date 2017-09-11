@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout_4">
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,5">
    <property name="spacing">
     <number>0</number>
    </property>
@@ -30,134 +30,31 @@
     <number>0</number>
    </property>
    <item>
-    <layout class="QGridLayout" name="gridLayout" columnstretch="0,1,1,1">
-     <item row="0" column="1">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLabel" name="label_add_master">
-         <property name="text">
-          <string>N/A</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="0" column="2">
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QLabel" name="label_add_slave1">
-         <property name="text">
-          <string>N/A</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="0" column="3">
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <widget class="QLabel" name="label_add_slave2">
-         <property name="text">
-          <string>N/A</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="1" column="0">
-      <widget class="QListWidget" name="listWidget">
-       <item>
-        <property name="text">
-         <string>概览</string>
-        </property>
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>总工时</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>增值/非增值</string>
-        </property>
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>增值</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>非增值</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>操作类别</string>
-        </property>
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>加工</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>检查</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>搬运</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>等待</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QTableWidget" name="table_master"/>
-     </item>
-     <item row="1" column="2">
-      <widget class="QTableWidget" name="table_slave1"/>
-     </item>
-     <item row="1" column="3">
-      <widget class="QTableWidget" name="table_slave2"/>
-     </item>
-    </layout>
+    <widget class="JsonTree" name="tree_product">
+     <column>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="PwhListWidget" name="listWidget"/>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PwhListWidget</class>
+   <extends>QListWidget</extends>
+   <header>Pwh/PwhListWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>JsonTree</class>
+   <extends>QTreeWidget</extends>
+   <header>JsonTree.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

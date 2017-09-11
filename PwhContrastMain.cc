@@ -101,15 +101,57 @@ void PwhContrastMain::clearThirdTable()
     w->on_delete_4_clicked();
 }
 
+void PwhContrastMain::importAnalysisFile()
+{
+    qDebug() << "addchart";
+    auto w = activeWindow();
+    if(w == nullptr)
+    {
+        return;
+    }
+    w->importAnalysisFile();
+}
+
+void PwhContrastMain::upChart()
+{
+    qDebug() << "upchart";
+    auto w = activeWindow();
+    if(w == nullptr)
+    {
+        return;
+    }
+    w->upChart();
+}
+
+void PwhContrastMain::downChart()
+{
+    qDebug() << "downchart";
+    auto w = activeWindow();
+    if(w == nullptr)
+    {
+        return;
+    }
+    w->downChart();
+}
+
+void PwhContrastMain::exportPDF()
+{
+    auto w = activeWindow();
+    if(w == nullptr)
+    {
+        return;
+    }
+    w->exportPDF();
+}
+
 void PwhContrastMain::initConn()
 {
     connect(ui->rib, &PwhContrastRibbon::fileNew, this, &PwhContrastMain::fileNew);
-    connect(ui->rib, &PwhContrastRibbon::add_first_table_clicked, this, &PwhContrastMain::addFirstTable);
-    connect(ui->rib, &PwhContrastRibbon::add_second_table_clicked, this, &PwhContrastMain::addSecondTable);
-    connect(ui->rib, &PwhContrastRibbon::add_third_table_clicked, this, &PwhContrastMain::addThirdTable);
-    connect(ui->rib, &PwhContrastRibbon::clear_first_table_clicked, this, &PwhContrastMain::clearFirstTable);
-    connect(ui->rib, &PwhContrastRibbon::clear_second_table_clicked, this, &PwhContrastMain::clearSecondTable);
-    connect(ui->rib, &PwhContrastRibbon::clear_third_table_clicked, this, &PwhContrastMain::clearThirdTable);
+
+    connect(ui->rib, &PwhContrastRibbon::importAnalysisFile, this, &PwhContrastMain::importAnalysisFile);
+    connect(ui->rib, &PwhContrastRibbon::upChart, this, &PwhContrastMain::upChart);
+    connect(ui->rib, &PwhContrastRibbon::downChart, this, &PwhContrastMain::downChart);
+    connect(ui->rib, &PwhContrastRibbon::exportPDF, this, &PwhContrastMain::exportPDF);
 
 }
 
